@@ -6,13 +6,14 @@ export const Container = styled.button`
   padding: 1.4rem;
   outline: none;
   border: none;
+  font-weight: 600;
 
   color: ${(props) => props.theme.colors.white};
   background-color: ${(props) => props.theme.colors.purple700};
   border-radius: 4px;
 
   cursor: pointer;
-  transition: 0.2s all ease-in-out;
+  transition: 200ms all ease-in-out;
 
   &:hover {
     background-color: ${(props) => props.theme.colors.purple500};
