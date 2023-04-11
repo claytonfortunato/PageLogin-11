@@ -1,4 +1,5 @@
 import logo from "../../assets/logo.svg";
+import { LoginForm } from "./components/LoginForm";
 
 import * as C from "./styles";
 
@@ -15,6 +16,7 @@ export const Home = () => {
           hoje.
         </h3>
       </C.Wrapper>
+      <LoginForm />
     </C.Container>
   );
 };

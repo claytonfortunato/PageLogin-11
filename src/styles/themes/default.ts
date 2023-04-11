@@ -14,6 +14,6 @@ export const defaultTheme = {
     gray900: "#0F172A",
     purple500: "#9F67FF",
     purple700: "#7C3AED",
-    white: "#FFFFFF",
+    white: "#FFF",
   },
 };
