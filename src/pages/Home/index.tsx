@@ -8,11 +8,13 @@ export const Home = () => {
       <C.Header>
         <img src={logo} alt="" />
       </C.Header>
-      <h2>Acesse a plataforma</h2>
-      <p>
-        Faça login ou registre-se para começar a construir seus projetos ainda
-        hoje.
-      </p>
+      <C.Wrapper>
+        <h2>Acesse a plataforma</h2>
+        <h3>
+          Faça login ou registre-se para começar a construir seus projetos ainda
+          hoje.
+        </h3>
+      </C.Wrapper>
     </C.Container>
   );
 };

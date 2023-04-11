@@ -34,3 +34,20 @@ export const Header = styled.div`
     height: 100%;
   }
 `;
+
+export const Wrapper = styled.div`
+  h2 {
+    font-size: 3.6rem;
+    color: ${(props) => props.theme.colors.gray800};
+  }
+
+  h3 {
+    max-width: 35.1rem;
+    margin: 1.6rem 0 4rem;
+
+    font-weight: 400;
+    font-size: 1.6rem;
+
+    color: ${(props) => props.theme.colors.gray600};
+  }
+`;
