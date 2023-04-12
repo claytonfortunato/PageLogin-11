@@ -4,16 +4,16 @@ import * as C from "./styles";
 import { Input } from "../../../../components/Input";
 import { Button } from "../../../../components/Button";
 
-interface FormData {
-  email: string;
-  password: string;
-}
-
 export const LoginForm = () => {
   return (
     <C.Container>
       <Input label="E-mail" placeholder="Digite seu e-mail" name="email" />
-      <Input label="Senha" placeholder="Digite sua senha" type="password" />
+      <Input
+        label="Senha"
+        placeholder="Digite sua senha"
+        name="password"
+        type="password"
+      />
       <Button label="Entrar" type="submit" />
     </C.Container>
   );

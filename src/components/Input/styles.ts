@@ -25,6 +25,11 @@ export const InputWrapper = styled.div`
 
   transition: all 200ms linear;
 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
   input {
     width: 100%;
 
@@ -38,5 +43,16 @@ export const InputWrapper = styled.div`
     &::placeholder {
       color: ${(props) => props.theme.colors.gray400};
     }
+  }
+
+  svg {
+    width: 2.4rem;
+    height: 2.4rem;
+    cursor: pointer;
+    color: ${(props) => props.theme.colors.gray400};
+  }
+  &:hover,
+  &:focus-within {
+    border-color: ${(props) => props.theme.colors.purple700};
   }
 `;
