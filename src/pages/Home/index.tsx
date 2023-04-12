@@ -1,4 +1,5 @@
 import logo from "../../assets/logo.svg";
+import { Footer } from "./components/Footer";
 import { LoginForm } from "./components/LoginForm";
 
 import * as C from "./styles";
@@ -17,6 +18,7 @@ export const Home = () => {
         </h3>
       </C.Wrapper>
       <LoginForm />
+      <Footer />
     </C.Container>
   );
 };

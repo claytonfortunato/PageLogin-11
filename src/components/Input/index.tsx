@@ -8,11 +8,11 @@ interface InputProps {
   placeholder: string;
 }
 
-export const Input = ({ label, placeholder }: InputProps) => {
+export const Input = ({ label, placeholder, name }: InputProps) => {
   return (
     <C.Container>
       <C.LabelWrapper>
-        <label htmlFor={label}>{label}</label>
+        <label htmlFor={name}>{label}</label>
       </C.LabelWrapper>
       <C.InputWrapper>
         <input type="text" placeholder={placeholder} />
