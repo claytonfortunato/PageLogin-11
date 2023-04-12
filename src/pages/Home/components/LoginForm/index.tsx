@@ -12,8 +12,8 @@ interface FormData {
 export const LoginForm = () => {
   return (
     <C.Container>
-      <Input />
-      <Input />
+      <Input label="E-Mail" placeholder="Digite seu e-mail" name="email" />
+      <Input label="Senha" placeholder="Digite sua senha" type="password" />
       <Button label="Entrar" type="submit" />
     </C.Container>
   );
