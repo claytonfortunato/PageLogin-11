@@ -35,4 +35,15 @@ export const GlobalStyle = createGlobalStyle`
             
         }
     }
+
+    a {
+        font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    color: ${(props) => props.theme.colors.purple700};
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 `;

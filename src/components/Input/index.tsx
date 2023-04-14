@@ -14,6 +14,8 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 export const Input = ({ label, placeholder, name, type }: InputProps) => {
   const [hidden, setHidden] = useState(true);
 
+  const recoverPassword = <a href="#">Esqueceu a senha?</a>;
+
   const Icon = hidden ? <EyeSlash /> : <Eye />;
 
   const obtainInputActualType = () => {
@@ -28,6 +30,7 @@ export const Input = ({ label, placeholder, name, type }: InputProps) => {
     <C.Container>
       <C.LabelWrapper>
         <label htmlFor={name}>{label}</label>
+        {type === "password" ? recoverPassword : <></>}
       </C.LabelWrapper>
       <C.InputWrapper>
         <input id={name} />

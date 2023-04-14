@@ -7,6 +7,10 @@ export const Container = styled.div`
 export const LabelWrapper = styled.div`
   margin-bottom: 0.8rem;
 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   label {
     font-size: 14px;
     font-weight: 600;
