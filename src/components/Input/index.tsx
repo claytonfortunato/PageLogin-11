@@ -8,23 +8,32 @@ import * as C from "./styles";
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
   name: string;
-  placeholder: string;
+  error: string | undefined;
 }
 
-export const Input = ({ label, placeholder, name, type }: InputProps) => {
+export const Input = ({ label, name, type, error }: InputProps) => {
   const [hidden, setHidden] = useState(true);
 
+  const actualType = obtainInputActualType();
   const recoverPassword = <a href="#">Esqueceu a senha?</a>;
 
-  const Icon = hidden ? <EyeSlash /> : <Eye />;
+  const Icon = hidden ? (
+    <EyeSlash onClick={handleToggleHideen} />
+  ) : (
+    <Eye onClick={handleToggleHideen} />
+  );
 
-  const obtainInputActualType = () => {
+  function obtainInputActualType() {
     if (type !== "password") {
       return type;
     }
 
     return hidden ? "password" : "text";
-  };
+  }
+
+  function handleToggleHideen() {
+    setHidden((prevValue) => !prevValue);
+  }
 
   return (
     <C.Container>
@@ -33,7 +42,7 @@ export const Input = ({ label, placeholder, name, type }: InputProps) => {
         {type === "password" ? recoverPassword : <></>}
       </C.LabelWrapper>
       <C.InputWrapper>
-        <input id={name} />
+        <input id={name} type={actualType} />
 
         {type === "password" ? Icon : <></>}
       </C.InputWrapper>
