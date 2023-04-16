@@ -60,3 +60,5 @@ export const InputWrapper = styled.div`
     border-color: ${(props) => props.theme.colors.purple700};
   }
 `;
+
+export const InvalidMessage = styled.span``;
