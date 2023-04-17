@@ -1,4 +1,4 @@
-import * as z from "zod";
+import * as zod from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, FormProvider } from "react-hook-form";
 
@@ -7,16 +7,16 @@ import { Button } from "../../../../components/Button";
 
 import * as C from "./styles";
 
-const loginFormValidationSchema = z.object({
-  email: z
+const loginFormValidationSchema = zod.object({
+  email: zod
     .string({
       required_error: "Email é obrigatório",
     })
     .email("Digite um e-mail válido"),
-  password: z.string().min(1, "Senha é obrigatória"),
+  password: zod.string().min(1, "Senha é obrigatória"),
 });
 
-type LoginFormData = z.infer<typeof loginFormValidationSchema>;
+type LoginFormData = zod.infer<typeof loginFormValidationSchema>;
 
 export function LoginForm() {
   const loginForm = useForm<LoginFormData>({

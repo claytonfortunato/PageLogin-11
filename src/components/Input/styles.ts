@@ -26,7 +26,7 @@ export const InputWrapper = styled.div<InputWrapperProps>`
   width: 100%;
 
   padding: 1.3rem;
-  margin-bottom: 32px;
+  margin-bottom: 14px;
 
   border: 1px solid ${(props) => props.theme.colors.gray200};
   border-radius: 4px;
