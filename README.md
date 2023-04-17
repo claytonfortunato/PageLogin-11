@@ -22,6 +22,7 @@ Evento exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnologia
   
 ## 👾 Deploy
 
+[Página de Login](https://page-login-11.vercel.app/)
 
 ## 🚀 Tecnologias
 
@@ -30,6 +31,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - Typescript
 - Styled-components
 - React hook form
+- Zod
 - Figma
 
 
