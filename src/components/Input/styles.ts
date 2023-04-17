@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+interface InputWrapperProps {
+  disabled?: boolean;
+  error: boolean;
+}
+
 export const Container = styled.div`
   width: 100%;
 `;
@@ -17,7 +22,7 @@ export const LabelWrapper = styled.div`
   }
 `;
 
-export const InputWrapper = styled.div`
+export const InputWrapper = styled.div<InputWrapperProps>`
   width: 100%;
 
   padding: 1.3rem;
@@ -61,4 +66,7 @@ export const InputWrapper = styled.div`
   }
 `;
 
-export const InvalidMessage = styled.span``;
+export const InvalidMessage = styled.span`
+  font-size: 16px;
+  color: ${(props) => props.theme.colors.error};
+`;

@@ -11,14 +11,9 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   error: string | undefined;
 }
 
-export const Input = ({
-  label,
-  name,
-  type,
-  placeholder,
-  error,
-}: InputProps) => {
+export function Input({ label, name, type, error, ...inputProps }: InputProps) {
   const [hidden, setHidden] = useState(true);
+  const { register } = useFormContext();
 
   const actualType = obtainInputActualType();
   const recoverPassword = <a href="#">Esqueceu a senha?</a>;
@@ -47,12 +42,17 @@ export const Input = ({
         <label htmlFor={name}>{label}</label>
         {type === "password" ? recoverPassword : <></>}
       </C.LabelWrapper>
-      <C.InputWrapper>
-        <input id={name} type={actualType} placeholder={placeholder} />
+      <C.InputWrapper error={!!error}>
+        <input
+          id={name}
+          type={actualType}
+          {...register(name)}
+          {...inputProps}
+        />
 
         {type === "password" ? Icon : <></>}
       </C.InputWrapper>
-      {error && <C.InvalidMessage></C.InvalidMessage>}
+      {error && <C.InvalidMessage>{error}</C.InvalidMessage>}
     </C.Container>
   );
-};
+}
